@@ -18,9 +18,9 @@
 }
 
 .link:hover {
-  color: rgb(61, 61, 220);
+  color: var(--color-primary);
 }
 
 .active {
-  color: rgb(61, 61, 220);
+  color: var(--color-primary);
 }

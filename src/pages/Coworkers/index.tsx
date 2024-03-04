@@ -1,10 +1,29 @@
-import React from "react";
-import Button, {ButtonColor} from "@/components/Button";
+import React, {useState} from "react";
+import {useStore} from "@/helpers/hooks/useStore.ts";
+import {useDispatch} from "react-redux";
 
 const Coworkers = () => {
-  return <div>Coworkers
+  const [inputValue, setInputValue] = useState('')
+  const {todoReducer} = useStore(state => state)
+  const dispatch = useDispatch()
+  return <div>
 
-    <Button color={ButtonColor.BLUE}>Hello</Button>
+    {todoReducer.todos.map(todo => (
+      <h4>{todo}
+        <button>Remove</button>
+        {/*  onClick = ()=>  dispatch({type: "REMOVE_TODO", todoName }) */}
+      </h4>
+    ))}
+    <input type="text"
+           value={inputValue}
+           onChange={({target: {value}}) => setInputValue(value)}
+           placeholder="Enter todo"
+    />
+    <button onClick={() => dispatch({
+      type: "ADD_TODO",
+      todo: inputValue,
+    })}>Add new todo
+    </button>
   </div>;
 };
 

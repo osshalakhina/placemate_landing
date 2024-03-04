@@ -5,11 +5,18 @@ $color-blue-cliked: var(--color-blue-cliked);
 $color-color-disabled: var(--color-disabled);
 $color-gray-text: var(--color-gray-text);
 
-.header {
+$supportGap: 2px;
+
+.Component {
+  background-color: $color-white;
+
+}
+
+
+.Header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: $color-white;
   padding: 20px 40px 20px 0;
 
   .logo {
@@ -22,7 +29,6 @@ $color-gray-text: var(--color-gray-text);
 
   .link {
     text-decoration: none;
-    margin-right: 40px;
     font-size: 14px;
     color: $color-black;
 
@@ -33,23 +39,6 @@ $color-gray-text: var(--color-gray-text);
 
   .active {
     color: $color-blue-base;
-  }
-
-  .headerBtn {
-    margin-left: 335px;
-    padding: 11px 20px;
-    font-weight: 500;
-    font-size: 16px;
-    border: 2px solid;
-    border-image: linear-gradient(to right, #4695ff, #fee219) 1;
-    border-radius: 10px;
-    background-color: $color-black;
-    color: $color-white;
-    cursor: pointer;
-
-    .headerFlag {
-      margin-left: 5px;
-    }
   }
 
   .currency {
@@ -85,4 +74,37 @@ $color-gray-text: var(--color-gray-text);
     margin-left: 19px;
     cursor: pointer;
   }
+}
+
+
+.headerBtn {
+  border: none;
+  width: fit-content;
+  flex-shrink: 0;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(to right, #4695FF, #FEE219);
+}
+
+.headerBtnInner {
+  margin: 2px;
+  padding: 11px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 10px;
+  background: $color-black;
+  color: $color-white;
+  cursor: pointer;
+
+  .headerFlag {
+    margin-left: 5px;
+  }
+}
+
+
+.List {
+  display: flex;
+  gap: 40px;
+  flex: 1;
 }

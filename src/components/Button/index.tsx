@@ -10,9 +10,17 @@ export enum ButtonColor {
   RED = 'red'
 }
 
+export enum ButtonSize {
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  LARGE = 'large'
+}
+
 
 interface ButtonProps {
-  color: ButtonColor
+  color: ButtonColor,
+  size: ButtonSize
+  isFullRounded?: boolean
 }
 
 const Button = (props: PropsWithChildren<ButtonProps>) => {

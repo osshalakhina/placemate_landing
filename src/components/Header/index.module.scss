@@ -1,0 +1,88 @@
+$color-white: var(--color-white);
+$color-black: var(--color-black);
+$color-blue-base: var(--color-blue-base);
+$color-blue-cliked: var(--color-blue-cliked);
+$color-color-disabled: var(--color-disabled);
+$color-gray-text: var(--color-gray-text);
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $color-white;
+  padding: 20px 40px 20px 0;
+
+  .logo {
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 80px;
+    font-size: 18px;
+    color: $color-black;
+  }
+
+  .link {
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 14px;
+    color: $color-black;
+
+    &:hover {
+      color: $color-blue-base;
+    }
+  }
+
+  .active {
+    color: $color-blue-base;
+  }
+
+  .headerBtn {
+    margin-left: 335px;
+    padding: 11px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #4695ff, #fee219) 1;
+    border-radius: 10px;
+    background-color: $color-black;
+    color: $color-white;
+    cursor: pointer;
+
+    .headerFlag {
+      margin-left: 5px;
+    }
+  }
+
+  .currency {
+    color: $color-gray-text;
+    font-weight: 500;
+    size: 14px;
+    margin: 0 40px 0 29px;
+  }
+
+  .headerLang {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .vertical-line {
+    width: 1px;
+    height: 32px;
+    background-color: #e7ecf3;
+    margin-left: 29px;
+  }
+
+  .headerAva {
+    width: 32px;
+    height: 32px;
+    margin-left: 29px;
+    cursor: pointer;
+  }
+
+  .arrow-down {
+    height: 6px;
+    width: 10px;
+    margin-left: 19px;
+    cursor: pointer;
+  }
+}

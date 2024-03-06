@@ -2,15 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 44px;
-  padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
   background-color: var(--color-primary);
   color: white;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -23,6 +20,24 @@
   background-color: var(--color-blue-base);
 }
 
-.red {
-  background-color: var(--color-blue-cliked);
+.small {
+  margin-top: 17px;
+  margin-left: 54px;
+  padding: 22px 42px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.medium {
+  position: absolute;
+  margin-left: 135px;
+  margin-top: -210px;
+  width: 200px;
+  height: 44px;
+  padding: 32px 16px;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.large {
 }

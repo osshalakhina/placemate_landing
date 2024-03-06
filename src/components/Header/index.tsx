@@ -1,7 +1,7 @@
-import {Link, useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import s from "./index.module.scss";
 import classNames from "classnames/bind";
-import {RoutesEnum} from "@/App.tsx";
+import { RoutesEnum } from "@/App.tsx";
 
 const cx = classNames.bind(s);
 
@@ -9,12 +9,12 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className={cx('Component')}>
+    <header className={cx("Component")}>
       <div className={cx("container", "Header")}>
         <Link className={cx("logo")} to="/">
           Placemate
         </Link>
-        <div className={cx('List')}>
+        <div className={cx("List")}>
           <Link
             className={cx("link", {
               active: location.pathname === RoutesEnum.COWORKERS,
@@ -39,7 +39,6 @@ const Header = () => {
           >
             For coworkings
           </Link>
-
         </div>
 
         <button className={cx("headerBtn")}>

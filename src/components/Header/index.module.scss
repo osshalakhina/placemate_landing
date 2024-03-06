@@ -1,17 +1,10 @@
-$color-white: var(--color-white);
-$color-black: var(--color-black);
-$color-blue-base: var(--color-blue-base);
-$color-blue-cliked: var(--color-blue-cliked);
-$color-color-disabled: var(--color-disabled);
-$color-gray-text: var(--color-gray-text);
-
 $supportGap: 2px;
 
 .Component {
-  background-color: $color-white;
-
+  background-color: var(--color-white);
+  position: relative;
+  z-index: 1;
 }
-
 
 .Header {
   display: flex;
@@ -24,28 +17,28 @@ $supportGap: 2px;
     margin-left: 40px;
     margin-right: 80px;
     font-size: 18px;
-    color: $color-black;
+    color: var(--color-black);
   }
 
   .link {
     text-decoration: none;
     font-size: 14px;
-    color: $color-black;
+    color: var(--color-black);
 
     &:hover {
-      color: $color-blue-base;
+      color: var(--color-blue-base);
     }
   }
 
   .active {
-    color: $color-blue-base;
+    color: var(--color-blue-base);
   }
 
   .currency {
-    color: $color-gray-text;
+    color: var(--color-gray-text);
     font-weight: 500;
     size: 14px;
-    margin: 0 40px 0 29px;
+    margin: 0 29px 0 40px;
   }
 
   .headerLang {
@@ -72,10 +65,10 @@ $supportGap: 2px;
     height: 6px;
     width: 10px;
     margin-left: 19px;
+    margin-right: 100px;
     cursor: pointer;
   }
 }
-
 
 .headerBtn {
   border: none;
@@ -84,7 +77,7 @@ $supportGap: 2px;
   padding: 0;
   border-radius: 10px;
   overflow: hidden;
-  background: linear-gradient(to right, #4695FF, #FEE219);
+  background: linear-gradient(to right, #4695ff, #fee219);
 }
 
 .headerBtnInner {
@@ -93,15 +86,14 @@ $supportGap: 2px;
   font-weight: 500;
   font-size: 16px;
   border-radius: 10px;
-  background: $color-black;
-  color: $color-white;
+  background: var(--color-black);
+  color: var(--color-white);
   cursor: pointer;
 
   .headerFlag {
     margin-left: 5px;
   }
 }
-
 
 .List {
   display: flex;
